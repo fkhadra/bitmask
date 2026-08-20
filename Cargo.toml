@@ -2,8 +2,21 @@
 name = "bitmask"
 version = "0.1.0"
 edition = "2024"
+description = "Compute bitmask from specification"
+repository = "https://github.com/fkhadra/bitmask"
+homepage = "https://github.com/fkhadra/bitmask"
 
 [dependencies]
 anyhow = "1.0.104"
 serde = { version = "1.0.229", features = ["derive"] }
 toml = "1.1.4"
+
+[profile.release]
+strip = true      
+opt-level = "z"   
+lto = true       
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"
+lto = "thin"
