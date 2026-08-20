@@ -1,0 +1,18 @@
+[[layout]]
+name  = "DNS Header Flags"
+spec  = "Header section format"
+url   = "https://www.rfc-editor.org/rfc/rfc1035#section-4.1.1"
+
+width = 16
+fields = [
+    { name = "QR",     bits = 1  },
+    { name = "Opcode", bits = 4  },
+    { name = "AA",     bits = 1  },
+    { name = "TC",     bits = 1  },
+    { name = "RD",     bits = 1  },
+    { name = "RA",     bits = 1  },
+    { name = "Z",      bits = 1  },
+    { name = "AD",     bits = 1  },
+    { name = "CD",     bits = 1  },
+    { name = "RCODE",  bits = 4  },
+]
